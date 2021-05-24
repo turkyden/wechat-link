@@ -14,10 +14,10 @@
 
 ## API
 
-| 参数 | 默认值 | 必填 |
-| --- | ----- | --- |
-| url | https://www.baidu.com | true |
-| text | 长按识别二维码查看原文 | false |
+| 参数 | 描述 | 默认值 | 必填 |
+| --- | ------ | ----- | --- |
+| url | 外链 URL 地址 | https://www.baidu.com | true |
+| text | 生成卡片文案 | `长按识别二维码查看原文` | false |
 
 ## Getting Started
 
