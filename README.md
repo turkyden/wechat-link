@@ -1,7 +1,7 @@
 # umi project
 
 ```markdown
-[![WeiXin QR Code Link](https://www.)]()
+[![WeiXin QR Code Link](https://https://magic-link-pink.vercel.app/api?url=https://www.baidu.com)](https://www.baidu.com)
 ```
 
 ## Getting Started
