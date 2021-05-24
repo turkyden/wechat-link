@@ -1,5 +1,9 @@
 # umi project
 
+```markdown
+[![WeiXin QR Code Link](https://www.)]()
+```
+
 ## Getting Started
 
 Install dependencies,
