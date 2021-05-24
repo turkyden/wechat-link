@@ -10,7 +10,14 @@
 
 ## How does it work ?
 
-![dsds](https://user-images.githubusercontent.com/24560160/119366252-597e9c80-bce3-11eb-8b3b-9960e9811122.png)
+![How does it work](https://user-images.githubusercontent.com/24560160/119366252-597e9c80-bce3-11eb-8b3b-9960e9811122.png)
+
+## API
+
+| 参数 | 默认值 | 必填 |
+| --- | ----- | --- |
+| url | https://www.baidu.com | true |
+| text | 长按识别二维码查看原文 | false |
 
 ## Getting Started
 
