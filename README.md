@@ -2,17 +2,13 @@
 
 <p align="center">🥕 微信公众号无法外链怎么办？一行代码搞定长按识别二维码。</p>
 
-```text
-https://wechat-link.vercel.app/api?url=https://www.baidu.com
+```markdown
+[![Wechat Link](https://wechat-link.vercel.app/api?url=https://www.baidu.com)](https://www.baidu.com)
 ```
 
 <p align="center">
   <a href="https://www.baidu.com" target="_blank"><img src="https://wechat-link.vercel.app/api?url=https://www.baidu.com" alt="WeiXin QR Code Link" /></a>
 </p>
-
-```markdown
-[![Wechat Link](https://wechat-link.vercel.app/api?url=https://www.baidu.com)](https://www.baidu.com)
-```
 
 ## How does it work ?
 
