@@ -1,0 +1,44 @@
+{
+  "private": true,
+  "scripts": {
+    "serve": "vercel dev",
+    "start": "umi dev",
+    "build": "umi build",
+    "postinstall": "umi generate tmp",
+    "prettier": "prettier --write '**/*.{js,jsx,tsx,ts,less,md,json}'",
+    "test": "umi-test",
+    "test:coverage": "umi-test --coverage"
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,jsx,less,md,json}": [
+      "prettier --write"
+    ],
+    "*.ts?(x)": [
+      "prettier --parser=typescript --write"
+    ]
+  },
+  "dependencies": {
+    "@ant-design/pro-layout": "^6.5.0",
+    "@types/qrcode": "^1.4.0",
+    "@umijs/preset-react": "1.x",
+    "qrcode": "^1.4.4",
+    "umi": "^3.4.22"
+  },
+  "devDependencies": {
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "@umijs/test": "^3.4.22",
+    "@vercel/node": "^1.10.0",
+    "lint-staged": "^10.0.7",
+    "prettier": "^2.2.0",
+    "react": "17.x",
+    "react-dom": "17.x",
+    "typescript": "^4.1.2",
+    "umi-plugin-tailwindcss": "^3.0.4",
+    "vercel": "^22.0.1",
+    "yorkie": "^2.0.0"
+  }
+}

@@ -1,3 +1,15 @@
-# magic-link
+# umi project
 
-Just url, transforming your link to qr card.
+## Getting Started
+
+Install dependencies,
+
+```bash
+$ yarn
+```
+
+Start the dev server,
+
+```bash
+$ yarn start
+```
