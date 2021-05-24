@@ -1,6 +1,6 @@
 <h1 align="center">Wechat Link</h1>
 
-<p align="center">微信公众号无法外链怎么办？一行代码搞定长按识别二维码。</p>
+<p align="center">🥕 微信公众号无法外链怎么办？一行代码搞定长按识别二维码。</p>
 
 ```markdown
 [![Wechat Link](https://wechat-link.vercel.app/api?url=https://www.baidu.com)](https://www.baidu.com)
