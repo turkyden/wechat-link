@@ -1,4 +1,4 @@
-# umi project
+# Magic Link
 
 [![WeiXin QR Code Link](https://magic-link-pink.vercel.app/api?url=https://www.baidu.com)](https://www.baidu.com)
 
