@@ -1,10 +1,10 @@
-<h2 textAlign="center">Wechat Link</h2>
+<h1 align="center">Wechat Link</h1>
 
-> 微信公众号无法外链怎么办？为你的文章链接加上，长按识别二维码，一行代码搞定跳转外部链接。
+<p align="center">微信公众号无法外链怎么办？为你的文章链接加上，长按识别二维码，一行代码搞定跳转外部链接。</p>
 
-[![WeiXin QR Code Link](https://wechat-link.vercel.app/api?url=https://www.baidu.com)](https://www.baidu.com)
-
-<p></p>
+<p align="center">
+  <a href="https://www.baidu.com" target="_blank"><img src="https://wechat-link.vercel.app/api?url=https://www.baidu.com" alt="WeiXin QR Code Link" /></a>
+</p>
 
 ```markdown
 [![Wechat Link](https://wechat-link.vercel.app/api?url=https://www.baidu.com)](https://www.baidu.com)
