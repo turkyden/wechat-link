@@ -25,3 +25,23 @@ Start the dev server,
 ```bash
 $ yarn start
 ```
+
+## Contributors
+
+感谢以下贡献者：
+
+![Contributors](https://contrib.rocks/image?repo=Turkyden/wechat-link)
+
+请自由地享受和参与开源 ❤️
+
+## Stargazers
+
+感谢以下支持者 ⭐
+
+[![Stargazers repo roster for @Turkyden/wechat-link](https://reporoster.com/stars/Turkyden/wechat-link)](https://github.com/Turkyden/wechat-link/stargazers)
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2FTurkyden%2Fwechat-link)
+
+## License
+
+[MIT](./LICENSE)
