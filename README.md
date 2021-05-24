@@ -1,9 +1,9 @@
 # umi project
 
-[![WeiXin QR Code Link](https://https://magic-link-pink.vercel.app/api?url=https://www.baidu.com)](https://www.baidu.com)
+[![WeiXin QR Code Link](https://magic-link-pink.vercel.app/api?url=https://www.baidu.com)](https://www.baidu.com)
 
 ```markdown
-[![WeiXin QR Code Link](https://https://magic-link-pink.vercel.app/api?url=https://www.baidu.com)](https://www.baidu.com)
+[![WeiXin QR Code Link](https://magic-link-pink.vercel.app/api?url=https://www.baidu.com)](https://www.baidu.com)
 ```
 
 ## Getting Started
