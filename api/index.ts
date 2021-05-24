@@ -77,7 +77,7 @@ export const generateSVG = async ({ text, url }) => {
 
     </style>
 
-    <rect class="stagger" style="animation-delay: 900ms" data-testid="card-bg" x="0.5" y="0.5" rx="2" height="90%" stroke="#E5E7EB" width="99.9%" fill="#fffefe" stroke-opacity="1" />
+    <rect class="stagger" style="animation-delay: 900ms" data-testid="card-bg" x="0.5" y="0.5" rx="2" height="90%" stroke="#E5E7EB" width="99.8%" fill="#fffefe" stroke-opacity="1" />
 
     <g data-testid="main-card-body" transform="translate(0, 0)">
       <g transform="translate(0, 6)">
