@@ -21,9 +21,11 @@
     ]
   },
   "dependencies": {
+    "@ant-design/icons": "^4.6.2",
     "@ant-design/pro-layout": "^6.5.0",
     "@types/qrcode": "^1.4.0",
     "@umijs/preset-react": "1.x",
+    "antd": "^4.16.0",
     "qrcode": "^1.4.4",
     "umi": "^3.4.22"
   },

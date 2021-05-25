@@ -3,10 +3,8 @@ import QRCode from 'qrcode';
 import toSJIS from 'qrcode/helper/to-sjis';
 
 export default async (request: VercelRequest, response: VercelResponse) => {
-  const {
-    text = '长按识别二维码查看原文',
-    url = 'https://www.baidu.com',
-  } = request.query;
+  const { text = '长按识别二维码查看原文', url = 'https://www.baidu.com' } =
+    request.query;
   try {
     const svg = await generateSVG({ text, url });
     response.setHeader('Content-Type', 'image/svg+xml;charset=UTF-8');
@@ -22,6 +20,16 @@ export const generateQR = async (text) => {
   } catch (err) {
     console.error(err);
   }
+};
+
+/**
+ * 限制文本字符
+ * @param str
+ * @param num
+ * @returns
+ */
+export const limitStr = (str: string, num: number) => {
+  return str.slice(0, num) + (str.length > num ? '...' : '');
 };
 
 /**
@@ -53,7 +61,6 @@ export const generateSVG = async ({ text, url }) => {
         font-weight: 300
       }
 
-
       /* Animations */
       @keyframes scaleInAnimation {
         from {
@@ -77,13 +84,16 @@ export const generateSVG = async ({ text, url }) => {
 
     </style>
 
-    <rect class="stagger" style="animation-delay: 900ms" data-testid="card-bg" x="0.5" y="0.5" rx="2" height="90%" stroke="#E5E7EB" width="99.8%" fill="#fffefe" stroke-opacity="1" />
+    <rect class="stagger" style="animation-delay: 900ms" data-testid="card-bg" x="0.5" y="0.5" rx="2" height="90%" stroke="#E5E7EB" width="99%" fill="#fffefe" stroke-opacity="1" />
 
-    <g data-testid="main-card-body" transform="translate(0, 0)">
+    <g data-testid="main-card-body" transform="translate(-6, 0)">
       <g transform="translate(0, 6)">
         <g transform="translate(0, 35)">
           <g class="stagger" style="animation-delay: 450ms" transform="translate(25, 0)">>
-            <text x="0" y="0" class="header" data-testid="header">${text}</text>
+            <text x="0" y="0" class="header" data-testid="header">${limitStr(
+              text,
+              12,
+            )}</text>
           </g>
         </g>
         <g transform="translate(0, 45)">
@@ -91,7 +101,7 @@ export const generateSVG = async ({ text, url }) => {
             <svg class="light" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
               <path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path>
             </svg>
-            <text class="stat light" x="20" y="12.5">${url}</text>
+            <text class="stat light" x="20" y="12.5">${limitStr(url, 32)}</text>
           </g>
         </g>
       </g>
