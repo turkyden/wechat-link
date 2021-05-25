@@ -24,10 +24,10 @@ Preview:
 
 ## API
 
-| 参数 | 描述 | 默认值 | 必填 |
+| Params | Description | Default | Required |
 | --- | ------ | ----- | --- |
-| url | 外链 URL 地址 | https://www.baidu.com | true |
-| text | 生成卡片文案 | "长按识别二维码查看原文" | false |
+| url | The outer url links of wechat | https://www.baidu.com | true |
+| text | The text content displayed in card | 长按识别二维码查看原文 | false |
 
 ## Getting Started
 
@@ -45,15 +45,15 @@ $ yarn start
 
 ## Contributors
 
-感谢以下贡献者：
+Thanks goes to these people:
 
 ![Contributors](https://contrib.rocks/image?repo=Turkyden/wechat-link)
 
-请自由地享受和参与开源 ❤️
+Please Feel free to enjoy and participate in open source!
 
 ## Stargazers
 
-感谢以下支持者 ⭐
+Thanks for your star!
 
 [![Stargazers repo roster for @Turkyden/wechat-link](https://reporoster.com/stars/Turkyden/wechat-link)](https://github.com/Turkyden/wechat-link/stargazers)
 
