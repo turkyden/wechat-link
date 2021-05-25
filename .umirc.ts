@@ -5,8 +5,7 @@ export default defineConfig({
     type: 'none',
   },
   theme: {
-    'primary-color': '#6366F1',
-    'border-radius-base': '4px',
+    'primary-color': '#EC4899',
   },
   antd: {
     dark: false, // 开启暗色主题

@@ -1,6 +1,5 @@
 import { ChangeEvent, useState } from 'react';
 import { Input, Typography } from 'antd';
-import 'antd/dist/antd.css';
 
 const { Paragraph } = Typography;
 
@@ -53,6 +52,18 @@ export default function IndexPage() {
           </Input.Group>
         </div>
       </div>
+
+      <p className="absolute bottom-0 left-0 w-full text-gray-500 text-sm text-center sm:text-center py-10">
+        MIT &amp; Created with 💜 By
+        <a
+          href="https://github.com/Turkyden"
+          className="text-pink-400 hover:text-pink-500 ml-1 hover:underline"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          @Turkyden
+        </a>
+      </p>
     </div>
   );
 }
