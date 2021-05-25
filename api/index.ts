@@ -5,7 +5,7 @@ import toSJIS from 'qrcode/helper/to-sjis';
 export default async (request: VercelRequest, response: VercelResponse) => {
   const {
     text = '长按识别二维码查看原文',
-    url = 'https://lorenzopepe.dev/blog/react-color-picker',
+    url = 'https://www.baidu.com',
   } = request.query;
   try {
     const svg = await generateSVG({ text, url });
