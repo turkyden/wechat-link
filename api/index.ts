@@ -1,7 +1,9 @@
 import { VercelRequest, VercelResponse } from '@vercel/node';
 import QRCode from 'qrcode';
-import toSJIS from 'qrcode/helper/to-sjis';
 
+/**
+ * Main
+ */
 export default async (request: VercelRequest, response: VercelResponse) => {
   const { text = '长按识别二维码查看原文', url = 'https://www.baidu.com' } =
     request.query;
@@ -14,16 +16,21 @@ export default async (request: VercelRequest, response: VercelResponse) => {
   }
 };
 
-export const generateQR = async (text) => {
+/**
+ * Generate the QRCode with str
+ * @param str
+ * @returns
+ */
+export const generateQR = async (str) => {
   try {
-    return await QRCode.toDataURL(text);
+    return await QRCode.toDataURL(str);
   } catch (err) {
     console.error(err);
   }
 };
 
 /**
- * 限制文本字符
+ * limit the str character
  * @param str
  * @param num
  * @returns

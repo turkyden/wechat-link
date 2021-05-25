@@ -1,9 +1,16 @@
 import { ChangeEvent, useState } from 'react';
-import { Input, Typography } from 'antd';
+import { Input, Typography, Button } from 'antd';
+import html2canvas from 'html2canvas';
+import { saveAs } from 'file-saver';
+import domtoimage from 'dom-to-image';
+import confetti from 'canvas-confetti';
 
 const { Paragraph } = Typography;
 
-const origin = 'https://wechat-link.vercel.app';
+const origin =
+  process.env.NODE_ENV === 'development'
+    ? ''
+    : 'https://wechat-link.vercel.app';
 
 export default function IndexPage() {
   const [url, setUrl] = useState('https://www.baidu.com');
@@ -15,6 +22,39 @@ export default function IndexPage() {
     setText(e.target.value);
 
   const src = `${origin}/api?url=${url}&text=${text}`;
+
+  const onExport = async (type = 'svg') => {
+    const fileName = new Date().getTime().toString();
+    const canvasDOM = document.querySelector('#canvas') as HTMLElement;
+    const randomInRange = (min: number, max: number) => {
+      return Math.random() * (max - min) + min;
+    };
+    const sleep = () =>
+      new Promise((resolve, reject) => {
+        window.setTimeout(() => resolve(''), 100);
+      });
+    if (canvasDOM) {
+      type === 'svg'
+        ? saveAs(src, fileName)
+        : html2canvas(canvasDOM).then((canvas: HTMLCanvasElement) => {
+            console.log(canvas);
+            canvas.toBlob((blob: Blob | null) => {
+              if (blob) {
+                saveAs(blob, fileName);
+              }
+            });
+          });
+      for (let index = 0; index < 5; index++) {
+        await sleep();
+        confetti({
+          angle: randomInRange(55, 125),
+          spread: randomInRange(30, 90),
+          particleCount: randomInRange(50, 100),
+          origin: { y: 0.6 },
+        });
+      }
+    }
+  };
 
   return (
     <div className="w-screen h-screen bg-gray-100 flex items-center justify-center">
@@ -30,7 +70,7 @@ export default function IndexPage() {
           </a>
         </div>
 
-        <img src={src} alt="Magic Link Card" />
+        <img id="canvas" src={src} alt="Magic Link Card" />
 
         <div className="text-center py-10 space-y-10">
           <Paragraph copyable={{ text: src }}>{src}</Paragraph>
@@ -50,6 +90,24 @@ export default function IndexPage() {
               addonBefore={<span>&text=</span>}
             />
           </Input.Group>
+
+          <div className="flex justify-center items-center space-x-4">
+            <Button
+              type="primary"
+              className="bg-gradient-to-r from-indigo-600 via-indigo-500 to-indigo-400"
+              onClick={() => onExport('svg')}
+            >
+              Export as SVG
+            </Button>
+
+            <Button
+              type="primary"
+              className="bg-gradient-to-r from-indigo-600 via-indigo-500 to-indigo-400"
+              onClick={() => onExport('png')}
+            >
+              Export as PNG
+            </Button>
+          </div>
         </div>
       </div>
 
