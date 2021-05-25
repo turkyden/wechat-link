@@ -8,7 +8,7 @@
 ## Usage
 
 ```markdown
-[![Wechat Link](https://wechat-link.vercel.app/api?url=https://www.baidu.com&text=长按识别二维码查看原文)](https://www.baidu.com)
+[![Wechat Link](https://wechat-link.vercel.app/api?url=https://www.baidu.com)](https://www.baidu.com)
 ```
 
 ## How does it work ?
