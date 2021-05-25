@@ -8,9 +8,13 @@
 
 ## Usage
 
+Write with markdown:
+
 ```markdown
 [![Wechat Link](https://wechat-link.vercel.app/api?url=https://www.baidu.com)](https://www.baidu.com)
 ```
+
+Preview:
 
 [![Wechat Link](https://wechat-link.vercel.app/api?url=https://www.baidu.com)](https://www.baidu.com)
 
