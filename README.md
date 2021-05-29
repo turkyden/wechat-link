@@ -3,7 +3,7 @@
 <p align="center">🥕 微信公众号无法外链怎么办？一行代码搞定长按识别二维码。</p>
 
 <p align="center">
-  <a href="https://www.baidu.com" target="_blank"><img src="./screenshot.png" alt="WeiXin QR Code Link" /></a>
+  <a href="https://wechat-link.vercel.app/" target="_blank"><img src="./screenshot.png" alt="WeiXin QR Code Link" /></a>
 </p>
 
 ## Usage
