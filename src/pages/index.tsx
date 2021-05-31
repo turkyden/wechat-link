@@ -2,7 +2,6 @@ import { ChangeEvent, useState } from 'react';
 import { Input, Typography, Button } from 'antd';
 import html2canvas from 'html2canvas';
 import { saveAs } from 'file-saver';
-import domtoimage from 'dom-to-image';
 import confetti from 'canvas-confetti';
 
 const { Paragraph } = Typography;
